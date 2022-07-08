@@ -14,9 +14,11 @@ $mform = new edit();
 if ($mform->is_cancelled()) {
     redirect($CFG->wwwroot . '/local/message/manage.php', 'You canceled');
 } else if ($fromform = $mform->get_data()) {
+    $date = date_create();
     $recordtoinsert = new stdClass();
     $recordtoinsert->messagetext = $fromform->messagetext;
     $recordtoinsert->messagetype = $fromform->messagetype;
+    $recordtoinsert->timeread= date_timestamp_get($date);
 
     $DB->insert_record('local_message', $recordtoinsert);
 
