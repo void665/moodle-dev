@@ -24,6 +24,15 @@ class edit extends moodleform
         $mform->addElement('select', 'messagetype', 'Message type', $choices);
         $mform->setDefault('messagetype','3');
 
+        $mform->addElement('advcheckbox', 'ratingtime', get_string('ratingtime', 'forum'),
+            'Im no robot', array('group' => 1), array(0, 1));
+
+
+        $mform->addElement('textarea', 'introduction', get_string("introtext", "survey"),
+            'wrap="virtual" rows="5" cols="40"');
+        $mform->setType('introduction', PARAM_NOTAGS);
+        $mform->setDefault('introduction', 'Please enter the introduction');
+
         $this->add_action_buttons();
 
     }
