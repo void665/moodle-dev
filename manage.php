@@ -9,7 +9,7 @@ $PAGE->set_title('Manage_messages');
 
 $messages = $DB->get_records('local_message');
 
-
+//check commit git
 echo $OUTPUT->header();
 
 $templatecontext = (object)[
