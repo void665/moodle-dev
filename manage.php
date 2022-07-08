@@ -9,7 +9,6 @@ $PAGE->set_title('Manage_messages');
 
 $messages = $DB->get_records('local_message');
 
-//check commit git
 echo $OUTPUT->header();
 
 $templatecontext = (object)[
@@ -18,5 +17,10 @@ $templatecontext = (object)[
 ];
 echo $OUTPUT->render_from_template('local_message/manage', $templatecontext);
 
+echo $OUTPUT->footer();
+echo $OUTPUT->footer();
+echo $OUTPUT->footer();
+echo $OUTPUT->footer();
+echo $OUTPUT->footer();
 echo $OUTPUT->footer();
 
